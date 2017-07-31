@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Todo List Express</title>
+    <style>
+    body{
+      background-color: lime;
+    }
+    .items{
+      display: flex;
+    }
+    li{
+      list-style: none;
+    }
+    </style>
+  </head>
+  <body>
+
+    <form action="/" method="post">
+
+      <h1>Let's do some shit!</h1>
+        
+
+  <form action="/list" method="post">
+    <div>
+      <input type="text" value="{{todo}}"
+      name="todo" placeholder="Add some shit here...">
+    </div>
+
+    <button>Add this shit...</button>
+
+  </form>
+
+      <ul>
+        {{#myTodos}}
+        <div class="items">
+        <li>{{.}} <a href=""{{@index}}>Did This Shit!</li>
+        </div>
+        {{/myTodos}}
+      </ul>
+
+
+
+
+    </form>
+
+  </body>
+</html>
